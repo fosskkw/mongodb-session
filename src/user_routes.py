@@ -30,23 +30,23 @@ async def root():
 
 
 @app.post('/sign_up/')
-async def sign_up(login_credentials: User):
-    db.insert_one({
-        'email': login_credentials.email,
-        'password': login_credentials.password
-    })
-
-    return {"details": login_credentials}
-
-
-@app.post('/login_in/')
-async def login_in(signup_credentials: User):
+async def sign_up(signup_credentials: User):
     db.insert_one({
         'email': signup_credentials.email,
         'password': signup_credentials.password
     })
 
     return {"details": signup_credentials}
+
+
+@app.post('/login_in/')
+async def login_in(login_credentials: User):
+    db.insert_one({
+        'email': login_credentials.email,
+        'password': login_credentials.password
+    })
+
+    return {"details": login_credentials}
 
 
 @app.delete('/users/delete/')
