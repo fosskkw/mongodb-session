@@ -12,6 +12,10 @@ The session was a practical guide on MongoDB Python driver PyMongo connectivity 
 
 ## Setup Instructions
 
+Make sure you have MongoDB installed on your system
+
+Install here: [MongoDB Installation](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/)
+
 1. Clone the repository
     ```
     git clone https://github.com/fossKKW/mongodb-session.git
